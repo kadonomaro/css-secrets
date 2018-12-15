@@ -3,52 +3,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
 }
-
-.box,
-.cube {
-    margin: 20px;
-    width: 200px;
-    height: 200px;
-    background-color: #f90;
-    background-clip: padding-box;
-    border: 5px solid rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 0 10px #f60;
-}
-.cube {
-    padding: 20px;
-    text-align: center;
-    color: #eee;
-    background-color: #303030;
-    box-shadow: 0 0 0 10px #303030;
-    border: 1px dashed #eee;
-    border-radius: 50px;
-    box-sizing: border-box;
-    transition: box-shadow 0.3s linear;
-    &:hover {
-        box-shadow: 0 0 0 10px #303030, 0 5px 10px 15px rgba($color: #000000, $alpha: 0.3);
-    }
-}
-
-.elem {
-    width: 250px;
-    height: 150px;
-    margin: 20px;
-    margin-top: 40px;
-    background-color: #f90;
-    border-radius: 20px;
-    outline: 15px solid #655;
-    box-shadow: 0 0 0 10px #655;
-    box-sizing: border-box;
-}
-
-.background {
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    background: linear-gradient(90deg, #fb3 30%, #58a 0);
-    background-size: 30px 100%;
-}
-
 .form {
     max-width: 300px;
     margin-left: 20px;
@@ -81,3 +35,54 @@
         
     }
 }
+
+.box,
+.cube {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: #f90;
+    background-clip: padding-box;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 10px #f60;
+}
+.cube {
+    padding: 20px;
+    text-align: center;
+    color: #eee;
+    background-color: #303030;
+    box-shadow: 0 0 0 10px #303030;
+    border: 1px dashed #eee;
+    border-radius: 50px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s linear;
+    &:hover {
+        box-shadow: 0 0 0 10px #303030, 
+                    0 5px 10px 15px rgba($color: #000000, $alpha: 0.3);
+    }
+}
+
+.elem {
+    width: 250px;
+    height: 150px;
+    margin: 20px;
+    margin-top: 40px;
+    background-color: #f90;
+    border-radius: 20px;
+    outline: 15px solid #655;
+    box-shadow: 0 0 0 10px #655;
+    box-sizing: border-box;
+}
+
+.background {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    // background: linear-gradient(90deg, #fb3 30%, #58a 0);
+    background: repeating-linear-gradient(45deg,#fb3, #fb3 15px, #58a 0, #58a 30px);
+    // background-size: 30px 30px;
+    &__value {
+        vertical-align: top;
+    }
+}
+
