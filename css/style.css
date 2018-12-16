@@ -509,4 +509,12 @@
           transform: rotate(0deg);
   border-radius: 0;
 }
+
+.text-array {
+  margin: 20px;
+}
+
+.text-char {
+  margin: 20px;
+}
 /*# sourceMappingURL=style.css.map */

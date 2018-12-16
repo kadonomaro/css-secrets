@@ -27,4 +27,25 @@ window.onload = function (){
         linear.style.background = "repeating-linear-gradient(" + linearRange.value + "deg, #fb3, #fb3 15px, #58a 0, #58a 30px)";
         
     });
+
+    var textArr = document.querySelector('.text-array');
+    var textArrStr = textArr.textContent;
+    
+    textArr.textContent = textArrStr.split('').reverse().join('');
+    
+    var textChar = document.querySelector('.text-char');
+    var textCharArr = [];
+    for (var i = 0; i <= textChar.textContent.length - 1; i++) {
+        
+        textCharArr[i] = textChar.textContent.charCodeAt(i);
+        textCharArr[i] += ' ';
+        
+        
+    }
+    textCharArr =  textCharArr.join('');
+    console.log(textCharArr);
+    textChar.textContent = textCharArr;
+    
+    
+
 }
