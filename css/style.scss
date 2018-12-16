@@ -12,6 +12,8 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .form {
     max-width: 300px;
@@ -290,11 +292,32 @@
 
 @keyframes wave3 {
     from {
-
+        
         background-color: #ab0;
     }
     to {
-
+        transform: translate(-10px, -10px) scale(0.8);
         background-color: #fc0;
+    }
+}
+
+
+.ellipse {
+    margin: 20px;
+    width: 200px;
+    height: 150px;
+    background-color: #abc;
+    border-radius: 50% / 100% 100% 0 0;
+}
+
+.romb {
+    margin: 40px;
+    width: 150px;
+    height: 150px;
+    transform: rotate(45deg);
+    overflow: hidden;
+    &__img {
+        transform: rotate(-45deg) scale(1.42);
+
     }
 }
