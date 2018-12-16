@@ -1,4 +1,5 @@
 window.onload = function (){
+//изменение и вывод кода цвета
     var formText = document.querySelector('.form__text');
     var formColor = document.querySelector('.form__color');
     var formCode = document.querySelector('.form__code');
@@ -14,7 +15,7 @@ window.onload = function (){
         page.style.backgroundColor = formColor.value;
         formCode.value = text;
     });
-
+//изменения угла наклона градиента
     var linear = document.querySelector('.background');
     var linearRange = document.querySelector('.background__range');
     var linearValue = document.querySelector('.background__value');
@@ -28,6 +29,7 @@ window.onload = function (){
         
     });
 
+// кодировка символов
     var textArr = document.querySelector('.text-array');
     var textArrStr = textArr.textContent;
     
@@ -35,17 +37,36 @@ window.onload = function (){
     
     var textChar = document.querySelector('.text-char');
     var textCharArr = [];
-    for (var i = 0; i <= textChar.textContent.length - 1; i++) {
+    for (let i = 0; i <= textChar.textContent.length - 1; i++) {
         
         textCharArr[i] = textChar.textContent.charCodeAt(i);
+        textCharArr[i] *= 3;
         textCharArr[i] += ' ';
-        
         
     }
     textCharArr =  textCharArr.join('');
-    console.log(textCharArr);
     textChar.textContent = textCharArr;
     
     
+//форма для кодировки введенных символов
+    var charText = document.querySelector('.char__text');
+    var charButton = document.querySelector('.char__button');
+    var charArea = document.querySelector('.char__area');
+    var charTextArr = [];
+    var charTextValue;
+
+
+    charButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        charTextValue = charText.value;
+        for (let i = 0; i <= charTextValue.length - 1; i++) {
+            
+            charTextArr[i] = charTextValue.charCodeAt(i);
+            charTextArr[i] += ' ';
+        }
+        var charTextArrJoin = charTextArr.join('');
+        charArea.value = charTextArrJoin;
+    });
+
 
 }

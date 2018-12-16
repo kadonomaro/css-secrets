@@ -517,4 +517,61 @@
 .text-char {
   margin: 20px;
 }
+
+.char {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: lightcoral;
+  border: 2px solid #303030;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.char__text {
+  margin-bottom: 10px;
+  padding: 8px 4px;
+  background-color: silver;
+  border: inherit;
+  border-radius: inherit;
+}
+
+.char__text::-webkit-input-placeholder {
+  color: #303030;
+}
+
+.char__text:-ms-input-placeholder {
+  color: #303030;
+}
+
+.char__text::-ms-input-placeholder {
+  color: #303030;
+}
+
+.char__text::placeholder {
+  color: #303030;
+}
+
+.char__button {
+  margin-bottom: 10px;
+  line-height: 30px;
+  background-color: lemonchiffon;
+  border: inherit;
+  border-radius: inherit;
+}
+
+.char__area {
+  background-color: silver;
+  border: inherit;
+  border-radius: inherit;
+  resize: none;
+}
 /*# sourceMappingURL=style.css.map */
