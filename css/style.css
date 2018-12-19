@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 .page {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -695,11 +699,24 @@
 .hyphens {
   width: 300px;
   margin: 20px;
-  padding: 8px 16px;
+  padding: 0.5em 1em;
+  line-height: 1.5;
+  background: #eee;
+  background-size: auto 3em;
+  background-origin: content-box;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(0, 0, 0, 0.1)), color-stop(0, transparent));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 50%, transparent 0);
   text-align: justify;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
   border: 1px solid #303030;
+}
+
+.hyphens__error {
+  background: linear-gradient(-45deg, transparent 40%, red 0, red 60%, transparent 0) 0 1em, linear-gradient(45deg, transparent 40%, red 0, red 60%, transparent 0) 0.1em 1em;
+  background-repeat: repeat-x;
+  background-size: 0.2em 0.1em;
+  text-shadow: 0.05em 0 white, -0.05em 0 white;
 }
 /*# sourceMappingURL=style.css.map */
