@@ -389,7 +389,21 @@
 
 
 .pie {
-
+    width: 100px;
+    height: 100px;
+    background: yellowgreen;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, transparent 50%, #655 0 );
+    overflow: hidden;
+    &::before {
+        content: '';
+        display: block;
+        margin-left: 50%;
+        height: 100%;
+        background-color: inherit;
+        transform-origin: left;
+        transform: rotate(0.2turn);
+    }
 }
 
 
@@ -432,5 +446,6 @@
         border: inherit;
         border-radius: inherit;
         resize: none;
+        
     }
 }

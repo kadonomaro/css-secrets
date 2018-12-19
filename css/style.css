@@ -510,6 +510,28 @@
   border-radius: 0;
 }
 
+.pie {
+  width: 100px;
+  height: 100px;
+  background: yellowgreen;
+  border-radius: 50%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(0, #655));
+  background-image: linear-gradient(to right, transparent 50%, #655 0);
+  overflow: hidden;
+}
+
+.pie::before {
+  content: '';
+  display: block;
+  margin-left: 50%;
+  height: 100%;
+  background-color: inherit;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: rotate(0.2turn);
+          transform: rotate(0.2turn);
+}
+
 .text-array {
   margin: 20px;
 }
