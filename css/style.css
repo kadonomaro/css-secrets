@@ -9,6 +9,9 @@ h1, h2, h3, h4, h5, h6, p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -408,8 +411,8 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #ab0;
   }
   to {
-    -webkit-transform: translate(-10px, -10px) scale(0.8);
-            transform: translate(-10px, -10px) scale(0.8);
+    -webkit-transform: translate(-20px, -20px) scale(0.8);
+            transform: translate(-20px, -20px) scale(0.8);
     background-color: #fc0;
   }
 }
@@ -419,8 +422,8 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: #ab0;
   }
   to {
-    -webkit-transform: translate(-10px, -10px) scale(0.8);
-            transform: translate(-10px, -10px) scale(0.8);
+    -webkit-transform: translate(-20px, -20px) scale(0.8);
+            transform: translate(-20px, -20px) scale(0.8);
     background-color: #fc0;
   }
 }
@@ -718,5 +721,54 @@ h1, h2, h3, h4, h5, h6, p {
   background-repeat: repeat-x;
   background-size: 0.2em 0.1em;
   text-shadow: 0.05em 0 white, -0.05em 0 white;
+}
+
+.text-effect {
+  margin: 20px;
+  padding: 8px 16px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #303030;
+  background: #8c99a6;
+  font-size: 18px;
+  color: #434d56;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.circular-text {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.circular-text svg {
+  display: block;
+  overflow: visible;
+}
+
+.button {
+  position: relative;
+  margin: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #55f;
+  border-radius: 50%;
+  border: 2px solid #0000ee;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: -20px;
+  right: -20px;
+  border-radius: 50%;
+}
+
+.button:hover {
+  background-color: #8888ff;
 }
 /*# sourceMappingURL=style.css.map */
