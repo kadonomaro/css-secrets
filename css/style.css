@@ -863,4 +863,67 @@ h1, h2, h3, h4, h5, h6, p {
     background-position: -800px 0;
   }
 }
+
+.blink-text {
+  margin: 20px;
+  width: 42ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.05em solid black;
+  -webkit-animation: typing 6s steps(42), caret 1s steps(1) infinite;
+          animation: typing 6s steps(42), caret 1s steps(1) infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.panoramic {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  background: url("/img/panoramic.jpg");
+  background-size: auto 100%;
+  -webkit-animation: panoramic 5s linear infinite alternate;
+          animation: panoramic 5s linear infinite alternate;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.panoramic:hover, .panoramic:focus {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes panoramic {
+  to {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes panoramic {
+  to {
+    background-position: 100% 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */

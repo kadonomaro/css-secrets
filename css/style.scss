@@ -669,3 +669,45 @@ h1,h2,h3,h4,h5,h6, p {
         background-position: -800px 0;
     }
 }
+
+
+.blink-text {
+    margin: 20px;
+    width: 42ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.05em solid black;
+    animation: typing 6s steps(42),
+                caret 1s steps(1) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+.panoramic {
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    background: url('/img/panoramic.jpg');
+    background-size: auto 100%;
+    animation: panoramic 5s linear infinite alternate;
+    animation-play-state: paused;
+    &:hover, &:focus {
+        animation-play-state: running;
+    }
+}
+
+@keyframes panoramic {
+    to {
+        background-position: 100% 0;
+    }
+}
