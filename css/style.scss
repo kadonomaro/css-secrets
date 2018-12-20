@@ -13,12 +13,13 @@ h1,h2,h3,h4,h5,h6, p {
 }
 
 .page {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    // filter: blur(10px) contrast(0.8) brightness(0.5);
 }
 .form {
     max-width: 300px;
@@ -168,6 +169,8 @@ h1,h2,h3,h4,h5,h6, p {
     linear-gradient(90deg, #ab4 23px, transparent 0),
     linear-gradient(90deg, #655 41px, transparent 0);
     background-size: 41px 100%, 61px 100%, 83px 100%;
+    overflow: auto;
+    resize: horizontal;
 }
 
 .wave,
@@ -532,7 +535,8 @@ h1,h2,h3,h4,h5,h6, p {
     text-align: justify;
     hyphens: auto;
     border: 1px solid #303030;
-
+    resize: horizontal;
+    overflow: auto;
     &__error {
         background: linear-gradient(-45deg, transparent 40%, red 0, red 60%, transparent 0) 0 1em,
                     linear-gradient(45deg, transparent 40%, red 0, red 60%, transparent 0) 0.1em 1em;
@@ -590,5 +594,42 @@ h1,h2,h3,h4,h5,h6, p {
     }
     &:hover {
         background-color: lighten($color: #5555ff, $amount: 10%);
+    }
+}
+
+
+.image-slider {
+    position: relative;
+    // display: inline-block;
+    margin: 20px;
+    &__before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 50%;
+        max-width: 100%;
+        resize: horizontal;
+        overflow: hidden;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #eee;
+            
+            // cursor: ew-resize;
+        }
+
+    }
+
+    &__after {
+        display: block;
+        filter: hue-rotate(90deg) brightness(0.8);
+
     }
 }
