@@ -17,6 +17,7 @@ h1,h2,h3,h4,h5,h6, p {
     align-items: flex-start;
     flex-wrap: wrap;
     margin: 0;
+    padding: 0 calc(50% - 650px);
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     // filter: blur(10px) contrast(0.8) brightness(0.5);
@@ -631,5 +632,40 @@ h1,h2,h3,h4,h5,h6, p {
         display: block;
         filter: hue-rotate(90deg) brightness(0.8);
 
+    }
+}
+
+
+.ball {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #abc;
+    border-radius: 50%;
+    animation-name: ball;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@keyframes ball {
+    to {
+        transform: translateY(100px);
+    }
+}
+
+
+.loader {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background: url('/img/loader.png') 0 0;
+    animation: loader 1s infinite steps(8);
+}
+
+@keyframes loader {
+    to {
+        background-position: -800px 0;
     }
 }

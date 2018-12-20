@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6, p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
+  padding: 0 calc(50% - 650px);
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -808,5 +809,58 @@ h1, h2, h3, h4, h5, h6, p {
   display: block;
   -webkit-filter: hue-rotate(90deg) brightness(0.8);
           filter: hue-rotate(90deg) brightness(0.8);
+}
+
+.ball {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #abc;
+  border-radius: 50%;
+  -webkit-animation-name: ball;
+          animation-name: ball;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@-webkit-keyframes ball {
+  to {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@keyframes ball {
+  to {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+.loader {
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background: url("/img/loader.png") 0 0;
+  -webkit-animation: loader 1s infinite steps(8);
+          animation: loader 1s infinite steps(8);
+}
+
+@-webkit-keyframes loader {
+  to {
+    background-position: -800px 0;
+  }
+}
+
+@keyframes loader {
+  to {
+    background-position: -800px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
