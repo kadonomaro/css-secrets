@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6, p {
     padding: 0 calc(50% - 650px);
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
-    // filter: blur(10px) contrast(0.8) brightness(0.5);
+
 }
 .form {
     max-width: 300px;
@@ -601,7 +601,6 @@ h1,h2,h3,h4,h5,h6, p {
 
 .image-slider {
     position: relative;
-    // display: inline-block;
     margin: 20px;
     &__before {
         position: absolute;
@@ -623,7 +622,6 @@ h1,h2,h3,h4,h5,h6, p {
             border-radius: 50%;
             background-color: #eee;
             
-            // cursor: ew-resize;
         }
 
     }
@@ -710,4 +708,9 @@ h1,h2,h3,h4,h5,h6, p {
     to {
         background-position: 100% 0;
     }
+}
+
+.svg-clip {
+    margin: 20px;
+    
 }
